@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アクセス制限</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+      margin-top: 50px; 
+      background-color: #f5f5f5;
+    }
+    input { 
+      padding: 10px; 
+      font-size: 16px; 
+      margin-top: 10px;
+    }
+    button { 
+      padding: 10px 20px; 
+      font-size: 16px; 
+      margin-left: 10px; 
+      cursor: pointer;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      display: inline-block;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("password").value;
+      // パスワードが「0112」と一致するかチェック
+      if (password === "0112") {
+        // 一致すれば指定のURLへリダイレクト
+        window.location.href = "https://docs.google.com/spreadsheets/d/1kGRvs_x6Qxf_UOkSC6gm7VSGSx1KAbH8eDc65JXL_Jk/edit?gid=0#gid=0";
+      } else {
+        // 不一致の場合、エラーメッセージを表示
+        alert("パスワードが違います。");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>アクセス制限</h2>
+    <p>パスワードを入力してください。</p>
+    <!-- パスワード入力フォーム -->
+    <input type="password" id="password" placeholder="パスワード">
+    <!-- 送信ボタン -->
+    <button onclick="checkPassword()">送信</button>
+  </div>
+</body>
+</html>
